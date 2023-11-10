@@ -23,4 +23,12 @@ build:
         manual:
           - dest: .
             src: '**/*.js'
+    - image: muhaiming2c/tickets
+      context: auth
+      docker:
+        dockerfile: Dockerfile
+      sync:
+        manual:
+          - dest: .
+            src: 'src/**/*.ts'
   
