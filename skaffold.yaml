@@ -24,7 +24,7 @@ build:
           - dest: .
             src: '**/*.js'
     - image: muhaiming2c/tickets
-      context: auth
+      context: tickets
       docker:
         dockerfile: Dockerfile
       sync:
