@@ -25,7 +25,7 @@ const orderSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    ststus: {
+    status: {
         type: String,
         required: true,
         enum: Object.values(OrderStatus),
@@ -53,4 +53,4 @@ orderSchema.statics.build = (attrs: OrderAttrs) => {
 
 const Order = mongoose.model<OrderDoc, OrderModel>('Order', orderSchema);
 
-export { Order };
+export { Order, OrderStatus };
